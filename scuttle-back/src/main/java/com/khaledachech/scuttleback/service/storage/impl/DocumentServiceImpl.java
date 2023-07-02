@@ -15,17 +15,16 @@ public class DocumentServiceImpl implements DocumentService {
     private DocumentRepository documentRepository;
     @Override
     public List<Document> get() {
-        return null;
+        return documentRepository.findAll();
     }
 
     @Override
-    public Document getById(long id) {
-        return null;
-    }
+    public Document getById(long id) { return documentRepository.findById(id).get(); }
 
     @Override
     public Document save(Document document) {
-        return null;
+        documentRepository.save(document);
+        return document;
     }
 
     @Override

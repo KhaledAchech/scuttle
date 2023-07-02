@@ -17,9 +17,7 @@ public class ValidationTest {
     private static final List BOOL_RANGE = new ArrayList<>(Arrays.asList(true, false, 1, 0));
 
     @Test
-    public void testString(String s) {
-        assertTrue(STRING_PATTERN.matcher(s).matches());
-    }
+    public void testString(String s) { assertTrue(STRING_PATTERN.matcher(s).matches()); }
 
     @Test
     public void testMail(String mail) {
