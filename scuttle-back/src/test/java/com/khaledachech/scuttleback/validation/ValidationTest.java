@@ -38,12 +38,4 @@ public class ValidationTest {
     public void testNullable(Object object) {
         assertNull(object);
     }
-
-    @Test
-    public <T> boolean testAllElementsSameObject(List l, Class<T> c) {
-        for (Object value : l) {
-            assertTrue(c.isInstance(value));
-        }
-        return true;
-    }
 }
