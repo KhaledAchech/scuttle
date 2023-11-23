@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class DocumentModelValidationTest {
 
     static TypeValidationTest typeValidationTest = new TypeValidationTest();
+    static ProjectModelValidationTest projectModelValidationTest = new ProjectModelValidationTest();
 
     private static final Pattern EXTENSION_PATTERN = Pattern.compile("^\\.[a-zA-Z0-9]+$");
     private static final List DOC_TYPES = new ArrayList<>(Arrays.asList(DocsType.IMAGE, DocsType.FILE, DocsType.FOLDER, DocsType.BIN, DocsType.DATA, DocsType.OBJECT));
@@ -45,6 +46,9 @@ public class DocumentModelValidationTest {
     @Test
     public void testProject(Project project) {
         assertFalse(project == null);
-        // TO DO: to be implemented after finishing the ProjectModelValidationTest class implementation.
+        projectModelValidationTest.testName(project.getName());
+        projectModelValidationTest.testBriefDescription(project.getBriefDescription());
+        projectModelValidationTest.testLongDescription(project.getLongDescription());
+        projectModelValidationTest.testVisibility(project.getVisibility());
     }
 }
