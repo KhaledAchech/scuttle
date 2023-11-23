@@ -1,8 +1,10 @@
 package com.khaledachech.scuttleback.service.storage.itf;
 
+import com.khaledachech.scuttleback.model.storage.Document;
 import com.khaledachech.scuttleback.model.storage.Project;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProjectService {
     List<Project> get();

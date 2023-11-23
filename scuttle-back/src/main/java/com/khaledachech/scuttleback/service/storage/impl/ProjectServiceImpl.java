@@ -1,5 +1,6 @@
 package com.khaledachech.scuttleback.service.storage.impl;
 
+import com.khaledachech.scuttleback.model.storage.Document;
 import com.khaledachech.scuttleback.model.storage.Project;
 import com.khaledachech.scuttleback.repository.storage.ProjectRepository;
 import com.khaledachech.scuttleback.service.storage.itf.ProjectService;
@@ -29,6 +30,8 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project update(long id, Project project) {
+        Project oldProject = projectRepository.findById(id).get();
+
         return null;
     }
 
