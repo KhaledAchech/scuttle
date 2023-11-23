@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ValidationTest {
+public class TypeValidationTest {
 
     private static final Pattern STRING_PATTERN = Pattern.compile("^[a-zA-Z\\s]+$");
     private static final Pattern MAIL_PATTERN = Pattern.compile("^(.+)@(.+)$");
