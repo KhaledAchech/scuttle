@@ -28,11 +28,6 @@ public class DocumentServiceImpl implements DocumentService {
     }
 
     @Override
-    public Document update(long id, Document document) {
-        return null;
-    }
-
-    @Override
     public List<Document> delete(long id) {
         return null;
     }

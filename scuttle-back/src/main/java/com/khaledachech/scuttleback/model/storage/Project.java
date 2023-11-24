@@ -1,6 +1,7 @@
 package com.khaledachech.scuttleback.model.storage;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,7 +32,7 @@ public class Project {
     @Column
     private int visibility;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("project")
     @OneToMany(mappedBy = "project", cascade=CascadeType.ALL)
     List<Document> documents = new ArrayList<>();
 

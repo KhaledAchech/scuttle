@@ -1,5 +1,6 @@
 package com.khaledachech.scuttleback.model.storage;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,6 +31,7 @@ public class Document {
     @Column
     private int visibility;
 
+    @JsonIgnoreProperties("documents")
     @ManyToOne
     private Project project;
 
