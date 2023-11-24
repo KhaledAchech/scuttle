@@ -9,4 +9,5 @@ public interface DocumentService {
     Document getById(long id);
     Document save(Document document);
     List<Document> delete(long id);
+    void deleteAll();
 }

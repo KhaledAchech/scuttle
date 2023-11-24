@@ -36,12 +36,18 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public List<Project> delete(long id) {
-        return null;
+        projectRepository.delete(projectRepository.findById(id).get());
+        return projectRepository.findAll();
     }
 
     @Override
     public List<Document> listProjectDocuments(long id) {
         Project project = projectRepository.findById(id).get();
         return project.getDocuments();
+    }
+
+    @Override
+    public void deleteAll() {
+        projectRepository.deleteAll();
     }
 }

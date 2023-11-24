@@ -30,4 +30,10 @@ public class ProjectController {
 
     @PostMapping
     public Project save(@RequestBody Project project) { return projectService.save(project); }
+
+    @DeleteMapping("/{id}")
+    public List<Project> delete(@PathVariable long id) { return projectService.delete(id); }
+
+    @DeleteMapping
+    public void deleteAll(){ projectService.deleteAll(); }
 }

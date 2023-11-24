@@ -11,4 +11,5 @@ public interface ProjectService {
     Project save(Project project);
     List<Project> delete(long id);
     List<Document> listProjectDocuments(long id);
+    void deleteAll();
 }

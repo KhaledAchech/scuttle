@@ -27,4 +27,10 @@ public class DocumentController {
 
     @PostMapping
     public Document save (@RequestBody Document document) { return documentService.save(document); }
+
+    @DeleteMapping("/{id}")
+    public List<Document> delete(@PathVariable long id) { return documentService.delete(id); }
+
+    @DeleteMapping
+    public void deleteAll(){ documentService.deleteAll(); }
 }
